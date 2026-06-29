@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
       { path: "speakers/:id", Component: SpeakerProfile },
       {path: "community", Component: Community },
       { path: "about", Component: About },
-      { path: "contact", Component: Home },
+      
       { path: "dashboard", Component: Dashboard },
     ],
   },

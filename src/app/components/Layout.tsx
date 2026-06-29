@@ -12,7 +12,6 @@ export function Layout() {
     { name: "Speakers", path: "/speakers" },
     { name: "Community", path: "/community" },
     { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
   ];
 
   return (
