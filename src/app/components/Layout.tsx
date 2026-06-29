@@ -10,7 +10,7 @@ export function Layout() {
     { name: "Home", path: "/" },
     { name: "Events", path: "/events" },
     { name: "Speakers", path: "/speakers" },
-    { name: "Mentorship", path: "/mentorship" },
+    { name: "Community", path: "/community" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -90,7 +90,7 @@ export function Layout() {
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><Link to="/events" className="hover:text-white">Events</Link></li>
                 <li><Link to="/speakers" className="hover:text-white">Speakers</Link></li>
-                <li><Link to="/mentorship" className="hover:text-white">Mentorship</Link></li>
+                <li><Link to="/community" className="hover:text-white">Community</Link></li>
               </ul>
             </div>
             <div>
