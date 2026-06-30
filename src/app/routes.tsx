@@ -6,6 +6,7 @@ import { SpeakerProfile } from "./pages/SpeakerProfile";
 import { Dashboard } from "./pages/Dashboard";
 import { Community } from "./pages/Community";
 import { About } from "./pages/About";
+import { Gallery } from "./pages/Gallery";
 import { Layout } from "./components/Layout";
 
 export const router = createBrowserRouter([
@@ -19,6 +20,7 @@ export const router = createBrowserRouter([
       { path: "speakers", Component: SpeakerProfile },
       { path: "speakers/:id", Component: SpeakerProfile },
       {path: "community", Component: Community },
+      { path: "gallery", Component: Gallery },
       { path: "about", Component: About },
       
       { path: "dashboard", Component: Dashboard },

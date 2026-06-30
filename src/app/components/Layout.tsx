@@ -11,6 +11,7 @@ export function Layout() {
     { name: "Events", path: "/events" },
     { name: "Speakers", path: "/speakers" },
     { name: "Community", path: "/community" },
+    { name: "Gallery", path: "/gallery" },
     { name: "About", path: "/about" },
   ];
 
@@ -90,6 +91,7 @@ export function Layout() {
                 <li><Link to="/events" className="hover:text-white">Events</Link></li>
                 <li><Link to="/speakers" className="hover:text-white">Speakers</Link></li>
                 <li><Link to="/community" className="hover:text-white">Community</Link></li>
+                <li><Link to="/gallery" className="hover:text-white">Gallery</Link></li>
               </ul>
             </div>
             <div>

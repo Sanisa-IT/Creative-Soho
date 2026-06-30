@@ -22,61 +22,62 @@ export function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-                THE CREATIVE<br />SOHO
-              </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                Connecting creative talent with industry opportunity.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  to="/events"
-                  className="inline-flex items-center px-6 py-3 bg-slate-800 text-white hover:bg-slate-700 transition-colors gap-2"
-                >
-                  Discover Events
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  to="/about"
-                  className="inline-flex items-center px-6 py-3 border-2 border-slate-800 text-slate-800 hover:bg-slate-50 transition-colors"
-                >
-                  Join the Community
-                </Link>
-              </div>
+      <section className="relative overflow-hidden">
+        {/* Background image carousel */}
+        <div className="absolute inset-0">
+          {heroImages.map((img, idx) => (
+            <ImageWithFallback
+              key={img}
+              src={img}
+              alt="Creative workspace"
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                idx === currentImageIndex ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
+          {/* Dark overlay for text legibility */}
+          <div className="absolute inset-0 bg-slate-900/70" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36">
+          <div className="max-w-2xl">
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-white">
+              THE CREATIVE<br />SOHO
+            </h1>
+            <p className="text-xl text-gray-200 mb-8">
+              Connecting creative talent with industry opportunity.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                to="/events"
+                className="inline-flex items-center px-6 py-3 bg-white text-slate-900 hover:bg-gray-100 transition-colors gap-2"
+              >
+                Discover Events
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/about"
+                className="inline-flex items-center px-6 py-3 border-2 border-white text-white hover:bg-white/10 transition-colors"
+              >
+                Join the Community
+              </Link>
             </div>
-            <div className="relative">
-              <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                {heroImages.map((img, idx) => (
-                  <ImageWithFallback
-                    key={img}
-                    src={img}
-                    alt="Creative workspace"
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                      idx === currentImageIndex ? "opacity-100" : "opacity-0"
-                    }`}
-                  />
-                ))}
-              </div>
-              {/* Carousel dots */}
-              <div className="flex justify-center gap-2 mt-4">
-                {heroImages.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setCurrentImageIndex(idx)}
-                    className={`w-2 h-2 rounded-full transition-all ${
-                      idx === currentImageIndex
-                        ? "bg-slate-800 w-8"
-                        : "bg-gray-300"
-                    }`}
-                    aria-label={`Go to slide ${idx + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
+          </div>
+
+          {/* Carousel dots */}
+          <div className="flex gap-2 mt-12">
+            {heroImages.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentImageIndex(idx)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  idx === currentImageIndex
+                    ? "bg-white w-8"
+                    : "bg-white/40"
+                }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>
