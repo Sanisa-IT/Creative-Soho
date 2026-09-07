@@ -34,15 +34,15 @@ export function Gallery() {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero */}
-      <section className="bg-slate-900 text-white">
+      <section className="bg-brand-third text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <p className="text-slate-400 text-sm uppercase tracking-widest mb-4 font-medium">
+          <p className="text-white/80 text-sm uppercase tracking-widest mb-4 font-medium">
             Gallery
           </p>
           <h1 className="text-5xl font-bold leading-tight mb-8">
             Moments from The Creative Soho
           </h1>
-          <p className="text-lg text-slate-300 leading-relaxed max-w-2xl">
+          <p className="text-lg text-white/90 leading-relaxed max-w-2xl">
             A look back at our events, workshops, and the community that makes
             it all possible.
           </p>

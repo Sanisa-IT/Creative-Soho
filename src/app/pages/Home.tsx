@@ -36,7 +36,7 @@ export function Home() {
             />
           ))}
           {/* Dark overlay for text legibility */}
-          <div className="absolute inset-0 bg-slate-900/70" />
+          <div className="absolute inset-0 bg-brand-fourth/80" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36">
@@ -50,14 +50,14 @@ export function Home() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/events"
-                className="inline-flex items-center px-6 py-3 bg-white text-slate-900 hover:bg-gray-100 transition-colors gap-2"
+                className="inline-flex items-center px-6 py-3 bg-brand-primary text-white hover:bg-brand-primary/90 transition-colors gap-2"
               >
                 Discover Events
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center px-6 py-3 border-2 border-white text-white hover:bg-white/10 transition-colors"
+                className="inline-flex items-center px-6 py-3 border-2 border-brand-secondary text-white hover:bg-brand-secondary/20 transition-colors"
               >
                 Join the Community
               </Link>
@@ -93,8 +93,8 @@ export function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6">
-                <Calendar className="w-8 h-8 text-slate-800" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-secondary/20 rounded-full mb-6">
+                <Calendar className="w-8 h-8 text-brand-secondary" />
               </div>
               <h3 className="text-xl font-bold mb-3">Industry Events</h3>
               <p className="text-gray-600">
@@ -102,8 +102,8 @@ export function Home() {
               </p>
             </div>
             <div className="text-center p-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6">
-                <Users className="w-8 h-8 text-slate-800" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-third/15 rounded-full mb-6">
+                <Users className="w-8 h-8 text-brand-third" />
               </div>
               <h3 className="text-xl font-bold mb-3">Mentorship</h3>
               <p className="text-gray-600">
@@ -111,8 +111,8 @@ export function Home() {
               </p>
             </div>
             <div className="text-center p-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6">
-                <Award className="w-8 h-8 text-slate-800" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-fourth/15 rounded-full mb-6">
+                <Award className="w-8 h-8 text-brand-fourth" />
               </div>
               <h3 className="text-xl font-bold mb-3">Networking</h3>
               <p className="text-gray-600">
@@ -124,7 +124,7 @@ export function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-800 text-white">
+      <section className="py-20 bg-brand-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl mb-8 text-gray-300">

@@ -21,7 +21,7 @@ export function Layout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center">
-              <span className="text-xl font-bold">The Creative Soho</span>
+              <span className="text-xl font-bold text-brand-primary">The Creative Soho</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -32,8 +32,8 @@ export function Layout() {
                   to={link.path}
                   className={`text-sm transition-colors ${
                     location.pathname === link.path
-                      ? "text-slate-900 border-b-2 border-slate-900 pb-1"
-                      : "text-gray-600 hover:text-slate-900"
+                      ? "text-brand-primary border-b-2 border-brand-primary pb-1"
+                      : "text-gray-600 hover:text-brand-primary"
                   }`}
                 >
                   {link.name}
@@ -59,7 +59,7 @@ export function Layout() {
                   to={link.path}
                   className={`block py-2 text-sm ${
                     location.pathname === link.path
-                      ? "text-slate-900 font-medium"
+                      ? "text-brand-primary font-medium"
                       : "text-gray-600"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
@@ -76,7 +76,7 @@ export function Layout() {
         <Outlet />
       </main>
 
-      <footer className="bg-slate-900 text-white mt-20">
+      <footer className="bg-brand-fourth text-white mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
